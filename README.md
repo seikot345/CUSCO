@@ -134,9 +134,8 @@ cusco edid -eject
 cusco edid -restore
 ```
 # Citation
-xxx
+Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Authorea</i>
 
 [pangene]: https://github.com/lh3/pangene
 [Astral]: https://github.com/smirarab/ASTRAL/raw/master/Astral.5.7.8.zip
 [AstralHP]: https://github.com/smirarab/ASTRAL?tab=readme-ov-file
-[zip]: 
