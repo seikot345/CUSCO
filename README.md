@@ -1,4 +1,4 @@
-# CUSCO : A tool/Pipeline for <ins>Cu</ins>rator of <ins>S</ins>ingle-<ins>C</ins>opy <ins>O</ins>rthologs
+# CUSCO : <ins>Cu</ins>rator of <ins>S</ins>ingle-<ins>C</ins>opy <ins>O</ins>rthologs
 <img width="750" alt="fig" src=https://github.com/user-attachments/assets/56dddfb0-0fe6-495c-bc2c-b5d8d2f4d1f3>
 
 # Installation & introduction
