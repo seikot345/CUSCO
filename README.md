@@ -1,5 +1,5 @@
 # CUSCO : <ins>Cu</ins>rator of <ins>S</ins>ingle-<ins>C</ins>opy <ins>O</ins>rthologs
-<img width="750" alt="fig" src=https://github.com/user-attachments/assets/de758c6f-0c59-489c-a668-037ca3bbee36>
+##<img width="750" alt="fig" src=https://github.com/user-attachments/assets/de758c6f-0c59-489c-a668-037ca3bbee36>
 
 # Installation & introduction
 1. how to build a conda environment that can run cusco pipeline.  
