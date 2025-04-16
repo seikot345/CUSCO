@@ -25,6 +25,7 @@ conda env create -n cusco -f environment.yaml
 # Preparing input for cusco 
 This process can be done with "prepare" command if you prepare following files:
 ```
+./cusco.py
 ./pangene-1.1-bin
 ./reference.faa
 ./species/sample1.fna, sample2.fna, ... 
@@ -45,6 +46,7 @@ After running "pupepare", the following files and directories should be created 
 # Making single-copy orthologs fasta and table file
 This process can be done  with "curate" command if you prepare input as follows:
 ```
+./cusco.py
 ./geneCNV.Rtab
 ./gff/sample1.gff, sample2.gff, ...
 ./input/sammple1.fna, sample2.fna, ...  
@@ -63,6 +65,7 @@ After running "curate", the following files and directories should be created in
 This process can be done with "phylo" command if you prepare following files:
 ```
 ./Astral
+./cusco.py
 ./single_copy_genes/gene1.fasta, gene2.fasta, ...
 
 # Make phylogenetic tree
@@ -105,6 +108,7 @@ After running "marker", the following files and directories should be created in
 # Primer design
 This process can be done with "primer" command if you prepare following files:
 ```
+./cusco.py
 ./gff/sample1.gff, sample2.gff, ...
 ./single_copy_genes.tsv
 ./species/sample1.fna, sample2.fna, ... 
