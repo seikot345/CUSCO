@@ -30,7 +30,7 @@ This process can be done with "prepare" command if you prepare following files:
 ./species/sample1.fna, sample2.fna, ... 
 
 # Prepare input file for cusco  
-cusco prepare -t INT -r reference.faa (or -p)
+python cusco.py prepare -t INT -r reference.faa (or -p)
 ```
 "prepare" command requires a reference sequence file name with -r. If you want the amino acid sequence of a single-copy gene CDS in the output, add -p (The default is the nucleic acid sequence). -t is common to all following commands and will get all available cores unless the number of cores is specified.  
 After running "pupepare", the following files and directories should be created in the current directory: 
@@ -50,7 +50,7 @@ This process can be done  with "curate" command if you prepare input as follows:
 ./input/sammple1.fna, sample2.fna, ...  
 
 # Make single-copy orthologs fasta and table file
-cusco curate -t INT 
+python cusco.py curate -t INT 
 ```
 This process perform extracting single-copy orthologs from Rtab file and trimming twice by gff and fna or faa.  
 After running "curate", the following files and directories should be created in the current directory: 
@@ -66,7 +66,7 @@ This process can be done with "phylo" command if you prepare following files:
 ./single_copy_genes/gene1.fasta, gene2.fasta, ...
 
 # Make phylogenetic tree
-cusco phylo -t INT (or -m STR -bs INT)
+python cusco.py phylo -t INT (or -m STR -bs INT)
 ```
 The fasta id must be edited to include only the species name using the edid function described below. You can chose substitution models using -m (default: -m MFP). "phylo" runs 1000 times of ultrafast bootstrap by default. You can specify the number of UFbootstrap with -bs. Specifying 0 will not execute UFbootstrap.  
 After running "phylo", the following files and directories should be created in the current directory: 
@@ -89,13 +89,13 @@ This process can be done with "marker" command if you prepare following files:
 ./gene_tree/gene1.contree, gene2.contree, ... (or ./gene_tree/gene1.treefile, gene2.treefile, ...)
 
 # Make marker single-copy orthologs list
-cusco marker
+python cusco.py marker
 
 # The command if you have original species tree like below
 ./your_original_species_tree.tree
 ./gene_tree/gene1.contree, gene2.contree, ... (or ./gene_tree/gene1.treefile, gene2.treefile, ...)
 
-cusco marker -sp your_original_species_tree.tree
+python cusco.py marker -sp your_original_species_tree.tree
 ```
 "marker" command makes list file that candidate ranking of useful marker site for additonal samples. Based on the Robinson–Foulds distance normalized to range between 0 and 1 (the closer to 0 the more similar the species trees are), marker genes are determined which gene phylogenetic trees are similar to the species phylogenetic tree.  
 After running "marker", the following files and directories should be created in the current directory: 
@@ -111,7 +111,7 @@ This process can be done with "primer" command if you prepare following files:
 
 
 # make multi fasta for detect candedate primaer resion
-cusco primer -g gene_name -i species_name1 species_name2 ...
+python cusco.py primer -g gene_name -i species_name1 species_name2 ...
 ```
 "primer" command makes a multifasta file to create primers. It requires a reference marker gene name with -g and also requires a reference name of species with -i. 
 After running "primer", the following files and directories should be created in the current directory:
@@ -120,17 +120,17 @@ After running "primer", the following files and directories should be created in
 ```
 # Pipeline "prepare" to "marker" 
 ```
-cusco pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
+python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
 ```
 # Modify the fasta ID 
 curatescg provides the process to change the fasta ID of all fasta file in a directory specific to each argument.
 ```
 # >MP00001 to >sample1_MP00001 of sample1.fasta in input directory
-cusco edid -insert
+python cusco.py edid -insert
 # >sample1_MP00001 to >sample1 of gene1.fasta in single_copy_genes directory
-cusco edid -eject
+python cusco.py edid -eject
 # >sample1 to >sample1_MP00001 of sample1.fasta in single_copy_genes directory using single_copy_genes.tsv
-cusco edid -restore
+python cusco.py edid -restore
 ```
 # Citation
 Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Authorea</i>
