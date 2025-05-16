@@ -2,9 +2,21 @@
 
 # Installation & introduction
 1. how to build a conda environment that can run cusco pipeline.  
-Install [Astral][Astral] from [Astral github website][AstralHP]. Install also [pangene][pangene] using following command. Both of software should add a directory to the PATH. Then, create new conda environment with environment.yaml.  
-Mambaforge users are encouraged to create the new environment with the commands in the mambaforge-cusco.txt.
+Install [Polyphest][Polyphest] first. And install [Astral][Astral] from [Astral github website][AstralHP], Install also [pangene][pangene] using following command. Both of software should add a directory to the PATH. Then, create new conda environment with environment.yaml. This section describes the installation procedure assuming software version management using Manbaforge (Miniforge).
 ```
+# Create new environment
+conda create -n cusco python==3.10.16 pip
+conda activate cusco
+
+# Install polyphest
+git clone https://github.com/NakhlehLab/Polyphest.git
+cd Polyphest
+pip install -r requirements.txt
+
+# update environment
+git clone https://github.com/seikot345/CUSCO.git
+conda env update --file environment.yaml
+
 # Install pangene
 curl -L https://github.com/lh3/pangene/releases/download/v1.1/pangene-1.1-bin.tar.bz2|tar jxf -
 
@@ -12,7 +24,7 @@ curl -L https://github.com/lh3/pangene/releases/download/v1.1/pangene-1.1-bin.ta
 unzip Astral.5.7.8.zip
 
 # Add PATH of both softwares
-export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/scripts:$(pwd)/Astral
+export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/scripts:$(pwd)/Astral:$(pwd)/Polyphest
 
 # Create new environment
 conda env create -n cusco -f environment.yaml
@@ -139,6 +151,7 @@ python cusco.py edid -restore
 # Citation
 Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Authorea</i>
 
+[Polyphes]:https://github.com/NakhlehLab/Polyphest
 [pangene]: https://github.com/lh3/pangene
 [Astral]: https://github.com/smirarab/ASTRAL/raw/master/Astral.5.7.8.zip
 [AstralHP]: https://github.com/smirarab/ASTRAL?tab=readme-ov-file
