@@ -25,9 +25,6 @@ unzip Astral.5.7.8.zip
 
 # Add PATH of both softwares
 export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/scripts:$(pwd)/Astral:$(pwd)/Polyphest
-
-# Create new environment
-conda env create -n cusco -f environment.yaml
 ```
 2. After the environment of analys is set up, prepare a reference protein sequences at current directory and a species directory that contains the whole genome sequences to be used cusco pipline, like following files:
 ```
