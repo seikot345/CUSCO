@@ -2,7 +2,7 @@
 
 # Installation & introduction
 1. how to build a conda environment that can run cusco pipeline.  
-Install [Polyphest][Polyphest] first. And install [Astral][Astral] from [Astral github website][AstralHP], Install also [pangene][pangene] using following command. Both of software should add a directory to the PATH. Then, create new conda environment with environment.yaml. This section describes the installation procedure assuming software version management using Manbaforge (Miniforge).
+Install [Polyphest][Polyphest] first. And install [Astral][Astral] from [Astral github website][AstralHP], Install also [pangene][pangene] using following command. These software should add a directory to the PATH. Then, create new conda environment with environment.yaml. This section describes the installation procedure assuming software version management using Manbaforge (Miniforge).
 ```
 # Create new environment
 conda create -n cusco python==3.10.16 pip
@@ -151,7 +151,7 @@ python cusco.py edid -restore
 # Citation
 Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Authorea</i>
 
-[Polyphes]:https://github.com/NakhlehLab/Polyphest
+[Polyphest]:https://github.com/NakhlehLab/Polyphest
 [pangene]: https://github.com/lh3/pangene
 [Astral]: https://github.com/smirarab/ASTRAL/raw/master/Astral.5.7.8.zip
 [AstralHP]: https://github.com/smirarab/ASTRAL?tab=readme-ov-file
