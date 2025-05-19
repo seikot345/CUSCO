@@ -136,7 +136,7 @@ After running "primer", the following files and directories should be created in
 python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
 ```
 # Modify the fasta ID 
-curatescg provides the process to change the fasta ID of all fasta file in a directory specific to each argument.
+CUSCO provides the process to change the fasta ID of all fasta file in a directory specific to each argument.
 ```
 # >MP00001 to >sample1_MP00001 of sample1.fasta in input directory
 python cusco.py edid -insert
