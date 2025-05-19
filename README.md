@@ -15,6 +15,7 @@ sed -i 's/1.23.5/1.24.0/g' requirements.txt
 pip install -r requirements.txt
 
 # update environment
+cd ../
 git clone https://github.com/seikot345/CUSCO.git
 conda env update --file environment.yaml
 
