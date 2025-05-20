@@ -11,7 +11,6 @@ conda activate cusco
 # Install polyphest
 git clone https://github.com/NakhlehLab/Polyphest.git
 cd Polyphest
-sed -i 's/1.23.5/1.24.0/g' requirements.txt
 pip install -r requirements.txt
 
 # update environment
