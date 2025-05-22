@@ -16,7 +16,9 @@ pip install -r requirements.txt
 # update environment
 cd ../
 git clone https://github.com/seikot345/CUSCO.git
+cd CUSCO
 conda env update --file environment.yaml
+cd ../
 
 # Install pangene
 curl -L https://github.com/lh3/pangene/releases/download/v1.1/pangene-1.1-bin.tar.bz2|tar jxf -
@@ -25,7 +27,7 @@ curl -L https://github.com/lh3/pangene/releases/download/v1.1/pangene-1.1-bin.ta
 unzip Astral.5.7.8.zip
 
 # Add PATH of both softwares
-export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/scripts:$(pwd)/Astral:$(pwd)/Polyphest
+export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/scripts:$(pwd)/Astral:$(pwd)/Polyphest:$(pwd)/Polyphest/polyphest
 ```
 2. After the environment of analys is set up, prepare a reference protein sequences at current directory and a species directory that contains the whole genome sequences to be used cusco pipline, like following files:
 ```
