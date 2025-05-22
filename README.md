@@ -18,6 +18,7 @@ cd ../
 git clone https://github.com/seikot345/CUSCO.git
 cd CUSCO
 conda env update --file environment.yaml
+mv cusco.py ../
 cd ../
 
 # Install pangene
