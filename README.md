@@ -139,6 +139,16 @@ After running "primer", the following files and directories should be created in
 ```
 python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
 ```
+# Polyploid mode
+If you add the argument -w to the above commands, polyploid genomes can also be handled in CUSCO preparing the following files (For example, out of four samples, only sample3 is tetraploid, while the others are diploid.):
+```
+./threshold.tsv (or .csv)  
+
+sample1  1
+sample2  1
+sample3  2
+sample4  1
+```
 # Modify the fasta ID 
 CUSCO provides the process to change the fasta ID of all fasta file in a directory specific to each argument.
 ```
