@@ -128,9 +128,9 @@ This process can be done with "primer" command if you prepare following files:
 
 
 # make multi fasta for detect candedate primaer resion
-python cusco.py primer -g gene_name -i species_name1 species_name2 ...
+python cusco.py primer -g gene_name -s species_name1 species_name2 ...
 ```
-"primer" command makes a multifasta file to create primers. It requires a reference marker gene name with -g and also requires a reference name of species with -i. 
+"primer" command makes a multifasta file to create primers. It requires a reference marker gene name with -g and also requires a reference name of species with -s. 
 After running "primer", the following files and directories should be created in the current directory:
 ```
 ./primer_design/gene_name_primerdesign.fasta
