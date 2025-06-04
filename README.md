@@ -17,7 +17,7 @@ pip install -r requirements.txt
 cd ../
 git clone https://github.com/seikot345/CUSCO.git
 cd CUSCO
-conda env update --file environment.yaml
+conda env update --file environment.yml
 mv cusco.py ../
 cd ../
 
