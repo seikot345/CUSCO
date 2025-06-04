@@ -149,9 +149,11 @@ sample2  1
 sample3  2
 sample4  1
 ```
-# Modify the fasta ID 
-CUSCO provides the process to change the fasta ID of all fasta file in a directory specific to each argument.
+# Data formatting function
+CUSCO provides the process to change the name or ID of all fasta file in a specified directory specific to each argument.
 ```
+# The name of whole genome fasta file change to species name.
+python cusco.py edid -species
 # >MP00001 to >sample1_MP00001 of sample1.fasta in input/input directory
 python cusco.py edid -insert
 # >sample1_MP00001 to >sample1 of gene1.fasta in input/single_copy_genes directory
