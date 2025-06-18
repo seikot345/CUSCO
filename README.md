@@ -47,7 +47,7 @@ This process can be done with "prepare" command if you prepare following files:
 python cusco.py prepare -t INT -r reference.faa (or -p)
 ```
 "prepare" command requires a reference sequence file name with -r. If you want the amino acid sequence of a single-copy gene CDS in the output, add -p (The default is the nucleic acid sequence). -t is common to all following commands and will get all available cores unless the number of cores is specified.  
-After running "pupepare", the following files and directories should be created in the current directory: 
+After running "prepare", the following files and directories should be created in the current directory: 
 ```
 ./input/geneCNV.Rtab
 ./input/gff/sample1.gff, sample2.gff, ...
