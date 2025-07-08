@@ -37,7 +37,7 @@ export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/sc
 ```
 
 
-# Pipeline "prepare" to "marker" 
+# Quick Start Pipeline ("prepare" to "marker") 
 ```
 python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
 ```
