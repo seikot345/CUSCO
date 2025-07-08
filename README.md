@@ -35,6 +35,14 @@ export PATH=$PATH:$(pwd)/pangene-1.1-bin/bin_x64-linux:$(pwd)/pangene-1.1-bin/sc
 ./input/reference.faa
 ./input/species/sample1.fna, sample2.fna, ... 
 ```
+
+
+# Pipeline "prepare" to "marker" 
+```
+python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
+```
+
+
 # Preparing input for cusco 
 This process can be done with "prepare" command if you prepare following files:
 ```
@@ -135,10 +143,7 @@ After running "primer", the following files and directories should be created in
 ```
 ./output/primer_design/gene_name_primerdesign.fasta
 ```
-# Pipeline "prepare" to "marker" 
-```
-python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
-```
+
 # Polyploid mode
 If you add the argument -p to the above commands, polyploid genomes can also be handled in CUSCO preparing the following threshold files (For example, out of four samples, only sample3 is tetraploid, while the others are diploid.):
 ```
