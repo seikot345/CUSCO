@@ -44,15 +44,15 @@ This process can be done with "prepare" command if you prepare following files:
 ./input/species/sample1.fna, sample2.fna, ... 
 
 # Prepare input file for cusco  
-python cusco.py prepare -t INT -r reference.faa (or -p)
+python cusco.py prepare -t INT -r reference.faa (or -a)
 ```
-"prepare" command requires a reference sequence file name with -r. If you want the amino acid sequence of a single-copy gene CDS in the output, add -p (The default is the nucleic acid sequence). -t is common to all following commands and will get all available cores unless the number of cores is specified.  
+"prepare" command requires a reference sequence file name with -r. If you want the amino acid sequence of a single-copy gene CDS in the output, add -a (The default is the nucleic acid sequence). -t is common to all following commands and will get all available cores unless the number of cores is specified.  
 After running "prepare", the following files and directories should be created in the current directory: 
 ```
 ./input/geneCNV.Rtab
 ./input/gff/sample1.gff, sample2.gff, ...
 ./input/graph.gfa
-./input/input/sample1.fna, sample2.fna, ... (or sample1.faa, sample2.faa, ...)
+./input/fasta/sample1.fna, sample2.fna, ... (or sample1.faa, sample2.faa, ...)
 ./input/paf/sample1.paf, sample2.paf, ...
 ```
 
@@ -62,7 +62,7 @@ This process can be done  with "curate" command if you prepare input as follows:
 ./cusco.py
 ./input/geneCNV.Rtab
 ./input/gff/sample1.gff, sample2.gff, ...
-./input/input/sammple1.fna, sample2.fna, ...  
+./input/fasta/sammple1.fna, sample2.fna, ...  
 
 # Make single-copy orthologs fasta and table file
 python cusco.py curate -t INT 
@@ -82,9 +82,9 @@ This process can be done with "phylo" command if you prepare following files:
 ./output/single_copy_genes/gene1.fasta, gene2.fasta, ...
 
 # Make phylogenetic tree
-python cusco.py phylo -t INT (or -m STR -bs INT)
+python cusco.py phylo -t INT (or -m STR -bs INT -rr sample1 ...)
 ```
-The fasta id must be edited to include only the species name using the edid function described below. You can chose substitution models using -m (default: -m MFP). "phylo" runs 1000 times of ultrafast bootstrap by default. You can specify the number of UFbootstrap with -bs. Specifying 0 will not execute UFbootstrap.  
+The fasta id must be edited to include only the species name using the edid function described below. You can chose substitution models using -m (default: -m MFP). "phylo" runs 1000 times of ultrafast bootstrap by default. You can specify the number of UFbootstrap with -bs. Specifying 0 will not execute UFbootstrap. If you want to specify a root of tree with -rr. 
 After running "phylo", the following files and directories should be created in the current directory: 
 ```
 ./input/gene_tree/gene1.bionj, gene1.ckp.gz, gene1.contree, gene1.iqtree, gene1.log, gene1.mldist, gene1.model.gz, gene1.splits.nex, gene1.treefile, gene1.ufboot, gene1.uniqueseq.phy, ...
@@ -119,7 +119,7 @@ After running "marker", the following files and directories should be created in
 ./output/marker.list
 ```
 # Primer design
-This process can be done with "primer" command if you prepare following files:
+This process can be done with "prime" command if you prepare following files:
 ```
 ./cusco.py
 ./input/gff/sample1.gff, sample2.gff, ...
@@ -128,9 +128,9 @@ This process can be done with "primer" command if you prepare following files:
 
 
 # make multi fasta for detect candedate primaer resion
-python cusco.py primer -g gene_name -s species_name1 species_name2 ...
+python cusco.py prime -g gene_name -s species_name1 species_name2 ...
 ```
-"primer" command makes a multifasta file to create primers. It requires a reference marker gene name with -g and also requires a reference name of species with -s. 
+"prime" command makes a multifasta file to create primers. It requires a reference marker gene name with -g and also requires a reference name of species with -s. 
 After running "primer", the following files and directories should be created in the output directory:
 ```
 ./output/primer_design/gene_name_primerdesign.fasta
@@ -140,9 +140,9 @@ After running "primer", the following files and directories should be created in
 python cusco.py pipeline -t INT -r reference.faa (or -p, -bs INT, -sp)
 ```
 # Polyploid mode
-If you add the argument -w to the above commands, polyploid genomes can also be handled in CUSCO preparing the following threshold files (For example, out of four samples, only sample3 is tetraploid, while the others are diploid.):
+If you add the argument -p to the above commands, polyploid genomes can also be handled in CUSCO preparing the following threshold files (For example, out of four samples, only sample3 is tetraploid, while the others are diploid.):
 ```
-./input/threshold.tsv (or .csv)  
+./input/copy_number.tsv (or .csv)  
 
 sample1  1
 sample2  1
