@@ -19,6 +19,7 @@ git clone https://github.com/seikot345/CUSCO.git
 cd CUSCO
 conda env update --file environment.yml
 mv cusco.py ../
+mv multree_builder.py utils.py ../Polyphest/polyphest
 cd ../
 
 # Install pangene
