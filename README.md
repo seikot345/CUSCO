@@ -168,7 +168,7 @@ python cusco.py edid -eject
 python cusco.py edid -restore
 ```
 # Citation
-Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Authorea</i>
+Seiko, T., Nagasawa, K., Naito, K. (2025). CUSCO: a tool for curating single-copy orthologs and extracting marker genes for phylogenetic tree construction with extra samples. <i>Ecological Research</i>, 40(6), e70015.
 
 [Polyphest]:https://github.com/NakhlehLab/Polyphest
 [pangene]: https://github.com/lh3/pangene
