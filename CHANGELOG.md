@@ -1,8 +1,8 @@
 ## [0.1.3] - 2026-02-17
 
 ### Changed
-- Supported input file extensions have been increased.
-- The script that creates the species tree has been modified.
+- Increased the extensions of supported input file.
+- Fixed the script that creates the species tree.
 
 ## [0.1.2] - 2025-07-08
 
@@ -35,4 +35,5 @@
 - In `phylo`, `polyphest` is used to generate `multree` and network (extended Newick format) as `species_tree`.
 - In `marker`, `multree` is used as the `species_tree` for comparison with gene trees, and nRF values are computed. All topological combinations of duplicated (polyploid) nodes in the `multree` are compared, and the gene set with the lowest nRF value is used to generate `marker.list`.
 - In `primer`, when selecting polyploid genomes, multi-FASTA files are generated for all gene copies of the target genes.
+
 
